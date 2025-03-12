@@ -3,7 +3,8 @@ package com.tericcabrel.auth_api.responses;
 public class LoginResponse {
     private String token;
     private long expiresIn;
-    private String getToken(){
+
+    public String getToken(){
         return token;
     }
 

@@ -41,6 +41,9 @@ public class User implements UserDetails {
         this.password = password;
     }
 
+    public User() {
+    }
+
     public Integer getId() {
         return id;
     }

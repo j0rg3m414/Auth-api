@@ -1,4 +1,4 @@
-package com.tericcabrel.auth_api.controllers;
+package com.tericcabrel.auth_api.config.controllers;
 
 import com.tericcabrel.auth_api.dtos.LoginUserDto;
 import com.tericcabrel.auth_api.dtos.RegistreUserDto;
@@ -23,8 +23,8 @@ public class AuthenticationController {
     }
 
     @GetMapping
-    public String teste(){
-        return "That's OK";
+    public ResponseEntity<String> teste(){
+        return ResponseEntity.ok("Tudo certo por aqui!");
     }
 
     @PostMapping("/signup")
@@ -33,7 +33,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(registeredUser);
     }
 
-    @PostMapping("/loginuser")
+    @PostMapping("/login")
     public ResponseEntity<LoginResponse> authenticate(@RequestBody LoginUserDto loginUserDto){
         User authenticatedUser = authenticationService.authenticate(loginUserDto);
         String jwtToken = jwtService.generateToken(authenticatedUser);
