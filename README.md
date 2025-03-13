@@ -11,3 +11,5 @@ Aqui estão as principais etapas desse processo:
 - Executar a autenticação, gerar o JWT e definir um tempo de expiração.
 - Utilizar o JWT gerado para aceder a rotas protegidas.
 - Detetar exceções de autenticação para personalizar a resposta enviada ao cliente.
+
+Implementação de Role-based Acces Control (RBAC)
